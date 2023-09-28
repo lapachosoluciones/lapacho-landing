@@ -1,3 +1,15 @@
+---
+import { SITE } from '../config.mjs';
+import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/widgets/Hero.astro';
+import Container from '../components/Container.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
 # Quiénes somos
 Lapacho Soluciones se constituye a partir del deseo y la necesidad de contribuir a la mejora de los sistemas de producción de pequeña y mediana escala, proporcionando acceso a las nuevas tecnologías de monitoreo procesamiento de datos y control.
 

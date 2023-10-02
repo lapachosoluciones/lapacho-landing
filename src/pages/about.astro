@@ -1,7 +1,10 @@
 ---
+import { Image} from "astro:assets"
 import { SITE } from '../config.mjs';
+
 import PageLayout from '../layouts/PageLayout.astro';
 import Container from '../components/Container.astro';
+import SectionHead from '../components/SectionHead.astro';
 
 const meta = {
   title: SITE.title,
@@ -9,13 +12,116 @@ const meta = {
   dontUseTitleTemplate: true,
 };
 ---
-# Quiénes somos
-Lapacho Soluciones se constituye a partir del deseo y la necesidad de contribuir a la mejora de los sistemas de producción de pequeña y mediana escala, proporcionando acceso a las nuevas tecnologías de monitoreo procesamiento de datos y control.
+<PageLayout title="About">
+  <Container>
+    <SectionHead>
+      <Fragment slot="title">Quienes Somos</Fragment>
+      <Fragment slot="desc">
+        Lapacho Soluciones se constituye a partir del deseo y la necesidad de contribuir a la mejora de los sistemas de producción de pequeña y mediana escala, proporcionando acceso a las nuevas tecnologías de monitoreo procesamiento de datos y control.
+      </Fragment>
+    </SectionHead>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Empoderando al mundo con IOT
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Somos un equipo multi cultural. Venimos de diversos
+        origenes y aportamos diferentes personalidades, experiencias y habilidades
+        de trabajo. Esto es lo que hace que nuestro equipo sea tan especial.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      <div class="group">
+        <div class="w-full aspect-square">
+          <Image src='https://images.unsplash.com/photo-1633332755192-727a05c4013d?&fit=crop&w=280' 
+            alt="Alejandro Anachuri" width="400" height="400"
+            class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl" />
+        </div>
 
+        <div class="mt-4 text-center">
+          <h2 class="text-lg text-gray-800">
+            Sebastian Lopez
+          </h2>
+          <h3 class="text-sm text-slate-500">
+            descripcion
+          </h3>
+        </div>
+      </div>
+      <!------------- -->
+      <div class="group">
+        <div class="w-full aspect-square">
+          <Image src='https://images.unsplash.com/photo-1633332755192-727a05c4013d?&fit=crop&w=280' 
+            alt="Alejandro Anachuri" width="400" height="400"
+            class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl" />
+        </div>
+
+        <div class="mt-4 text-center">
+          <h2 class="text-lg text-gray-800">
+            Alejandro Anachuri
+          </h2>
+          <h3 class="text-sm text-slate-500">
+            descripcion
+          </h3>
+        </div>
+      </div>
+      <!------------- -->
+      <div class="group">
+        <div class="w-full aspect-square">
+          <Image src='https://images.unsplash.com/photo-1633332755192-727a05c4013d?&fit=crop&w=280' 
+            alt="Alejandro Anachuri" width="400" height="400"
+            class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl" />
+        </div>
+
+        <div class="mt-4 text-center">
+          <h2 class="text-lg text-gray-800">
+            Juan De Pascuale
+          </h2>
+          <h3 class="text-sm text-slate-500">
+            descripcion
+          </h3>
+        </div>
+      </div>
+      <!------------- -->
+      <div class="group">
+        <div class="w-full aspect-square">
+          <Image src='https://images.unsplash.com/photo-1633332755192-727a05c4013d?&fit=crop&w=280' 
+            alt="Alejandro Anachuri" width="400" height="400"
+            class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl" />
+        </div>
+
+        <div class="mt-4 text-center">
+          <h2 class="text-lg text-gray-800">
+            Hugo Jose
+          </h2>
+          <h3 class="text-sm text-slate-500">
+            descripcion
+          </h3>
+        </div>
+      </div>
+      <!------------- -->
+      <div class="group">
+        <div class="w-full aspect-square">
+          <Image src='https://images.unsplash.com/photo-1633332755192-727a05c4013d?&fit=crop&w=280' 
+            alt="Alejandro Anachuri" width="400" height="400"
+            class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl" />
+        </div>
+
+        <div class="mt-4 text-center">
+          <h2 class="text-lg text-gray-800">
+            Cesar Artunduaga
+          </h2>
+          <h3 class="text-sm text-slate-500">
+            descripcion
+          </h3>
+        </div>
+      </div>
+      <!------------- -->
+    </div>
 
 ## Misión
 Apoyados en la tecnología y en nuestro capital humano, ayudamos a organizaciones públicas y privadas en la modernización de sus procesos a través de soluciones tecnológicas vinculadas al internet de las cosas y la inteligencia artificial para el incremento de la productividad en armonía con el desarrollo sostenible de las comunidades a las que pertenecen, haciendo especial foco en la optimización de procesos que permiten el cuidado del medio ambiente como consecuencia de la utilización precisa de los recursos energéticos y naturales.
 
 ## Visión
 Somos flexibles y nos adaptamos rápidamente a los cambios. Aspiramos a convertirnos en un actor destacado en el ecosistema tecnológico para la transformación de los sistemas de producción de nuestros clientes hacia modelos más eficientes.
-
+  </Container>
+</PageLayout>
